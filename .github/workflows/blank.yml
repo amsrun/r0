@@ -34,8 +34,7 @@ jobs:
         uses: amsrun/template/.github/actions/test-action@main
         with:
           test-path: "aa"
-          org-var: ${{ env.ORG_VAR }}
-          repo-var: ${{ secrets.GITHUB_TOKEN }}
+          org-var: ${{ vars.ORG_VAR }}
   test:
     runs-on: ubuntu-latest
     environment: staging
