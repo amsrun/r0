@@ -33,4 +33,14 @@ jobs:
       - name: Run a multi-line script
         uses: amsrun/template/.github/actions/test-action@main
         with:
-          test-path: "abc"
+          test-path: "aa"
+          org-var: ${{ env.ORG_VAR }}
+          repo-var: ${{ secrets.GITHUB_TOKEN }}
+  test:
+    runs-on: ubuntu-latest
+    environment: staging
+    steps:
+      - name: Run a multi-line script
+        uses: amsrun/template/.github/actions/test-action@main
+        with:
+          test-path: ${{ secrets.API_KEY }}
