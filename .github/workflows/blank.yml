@@ -37,7 +37,7 @@ jobs:
           org-var: ${{ vars.ORG_VAR }}
   test:
     runs-on: ubuntu-latest
-    environment: staging
+    environment: development
     steps:
       - name: Run a multi-line script
         uses: amsrun/template/.github/actions/test-action@main
